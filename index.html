@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Alavanca Infinita - Dr. Reginaldo Oliveira | Automação Jurídica</title>
+    <meta name="description" content="O Manual Prático de Automação para Advogados. Troque o esforço bruto pela inteligência digital.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#050505',
+                        gunmetal: '#12141b',
+                        neonGreen: '#39FF14',
+                        neonGreenHover: '#32e010',
+                        electricCyan: '#00F0FF',
+                        vividPurple: '#BC13FE',
+                        platinum: '#F0F0F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display:,
+                        mono:,
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(57, 255, 20, 0.5)',
+                        'neon-hover': '0 0 25px rgba(57, 255, 20, 0.8)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Efeitos Especiais Cyberpunk */
+        body {
+            background-color: #050505;
+            color: #F0F0F0;
+            overflow-x: hidden;
+        }
+        
+       .hero-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(18, 20, 27, 1) 0%, rgba(5, 5, 5, 1) 100%);
+            position: relative;
+        }
+
+        /* Grid Background Effect */
+       .cyber-grid {
+            background-image: linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 0;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+        }
+
+       .neon-text-green {
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+        }
+        
+       .card-glass {
+            background: rgba(18, 20, 27, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+       .card-glass:hover {
+            transform: translateY(-5px);
+            border-color: #00F0FF;
+        }
+
+        /* Botão Pulsante */
+        @keyframes pulse-neon {
+            0% { box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(57, 255, 20, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(57, 255, 20, 0); }
+        }
+        
+       .btn-pulse {
+            animation: pulse-neon 2s infinite;
+        }
+
+        /* Book Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px) rotateY(-5deg); }
+            50% { transform: translateY(-15px) rotateY(0deg); }
+            100% { transform: translateY(0px) rotateY(-5deg); }
+        }
+        
+       .book-float {
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 20px 30px rgba(0, 240, 255, 0.15));
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <span class="font-display font-bold text-xl tracking-tighter text-white">
+                        <span class="text-neonGreen">///</span> CÓDIGO DO ATALHO
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#checkout" class="bg-transparent border border-neonGreen text-neonGreen hover:bg-neonGreen hover:text-obsidian px-4 py-2 rounded font-mono text-sm font-bold transition-all uppercase">
+                        Garantir Acesso
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-24 pb-12 px-4 relative overflow-hidden">
+        <div class="cyber-grid"></div>
+        
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-vividPurple/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-electricCyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="text-center lg:text-left space-y-6">
+                <div class="inline-block px-3 py-1 border border-electricCyan/30 rounded-full bg-electricCyan/5 backdrop-blur">
+                    <span class="text-electricCyan font-mono text-xs tracking-wide">⚠️ PARA ADVOGADOS QUE QUEREM ESCALAR</span>
+                </div>
+                
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                    TROQUE O ESFORÇO BRUTO PELA <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonGreen to-electricCyan neon-text-green">INTELIGÊNCIA DIGITAL</span>
+                </h1>
+                
+                <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 font-light">
+                    O Manual Definitivo para automatizar a rotina, blindar o escritório e lucrar enquanto dorme. Não é sobre trabalhar mais. É sobre a <strong class="text-white">Alavanca Infinita</strong>.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                    <a href="#checkout" class="btn-pulse bg-neonGreen text-obsidian font-display font-bold text-lg px-8 py-4 rounded hover:bg-neonGreenHover hover:scale-105 transition-all uppercase tracking-wide shadow-neon text-center">
+                        Quero o Código Agora
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2 sm:mt-0 flex items-center justify-center gap-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        Disponível Imediatamente
+                    </p>
+                </div>
+                
+                <div class="pt-8 flex items-center justify-center lg:justify-start gap-4 text-gray-500 text-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-gray-700 border border-obsidian"></div>
+                        <div class="w-8 h-8 rounded-full bg-gray-600 border border-obsidian"></div>
+                        <div class="w-8 h-8 rounded-full bg-gray-500 border border-obsidian"></div>
+                    </div>
+                    <p>+1.000 Advogados já ativaram</p>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center perspective-1000">
+                <img src="URL_DA_IMAGEM_1_LIVRO_AQUI" alt="Capa do Livro A Alavanca Infinita" class="book-float w-full max-w-md rounded-lg shadow-2xl relative z-10 transform rotate-y-12">
+                
+                <div class="absolute inset-0 bg-gradient-to-tr from-neonGreen/20 to-vividPurple/20 blur-3xl -z-10 transform scale-90"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gunmetal py-20 px-4 border-t border-white/5">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="font-display text-3xl font-bold mb-12">VOCÊ ESTUDOU PARA SER ESTRATEGISTA, <br><span class="text-red-500">MAS VIROU UM ESCRAVO DA BUROCRACIA</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl bg-obsidian border border-red-500/20 hover:border-red-500/50 transition-colors">
+                    <div class="text-4xl mb-4">📄</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">Digitador de Luxo</h3>
+                    <p class="text-gray-400 text-sm">Passa 80% do dia formatando peças e respondendo WhatsApp repetitivo.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-obsidian border border-red-500/20 hover:border-red-500/50 transition-colors">
+                    <div class="text-4xl mb-4">📉</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">Teto de Faturamento</h3>
+                    <p class="text-gray-400 text-sm">Se você para de trabalhar, o dinheiro para de entrar. Você não tem escala.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-obsidian border border-red-500/20 hover:border-red-500/50 transition-colors">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">Medo da Irrelevância</h3>
+                    <p class="text-gray-400 text-sm">Vê a IA avançando e sente que está ficando para trás no mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-obsidian py-24 px-4 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-electricCyan font-mono tracking-widest text-sm uppercase">O Sistema Operacional</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold mt-2">O QUE VOCÊ VAI INSTALAR NO SEU ESCRITÓRIO</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 card-glass p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-6xl">🧠</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Módulo 1: O Cérebro Externo</h3>
+                    <p class="text-gray-400 mb-4">Aprenda o Prompt P.A.R.E. e domine o ChatGPT jurídico. Crie contratos e petições 10x mais rápido sem alucinações da IA.</p>
+                    <div class="text-electricCyan font-mono text-sm">> Acessar protocolo_texto.exe</div>
+                </div>
+
+                <div class="card-glass p-8 rounded-2xl relative overflow-hidden group">
+                    <h3 class="text-xl font-bold text-white mb-2">Módulo 2: Fábrica Visual</h3>
+                    <p class="text-gray-400 text-sm mb-4">Crie imagens High-Ticket para seu Instagram sem designer.</p>
+                    <div class="text-vividPurple font-mono text-sm">> Midjourney v6</div>
+                </div>
+
+                <div class="card-glass p-8 rounded-2xl relative overflow-hidden group">
+                    <h3 class="text-xl font-bold text-white mb-2">Módulo 3: Clone Digital</h3>
+                    <p class="text-gray-400 text-sm mb-4">Multiplique sua presença. Vídeos com sua voz e rosto, sem gravar.</p>
+                    <div class="text-vividPurple font-mono text-sm">> HeyGen + ElevenLabs</div>
+                </div>
+
+                <div class="md:col-span-2 card-glass p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-6xl">⚙️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Módulo 4: A Máquina de Vendas</h3>
+                    <p class="text-gray-400 mb-4">O setup exato do ManyChat + Zapier para cobrar e vender no automático. O "Vendedor Silencioso" que trabalha 24/7.</p>
+                    <div class="text-electricCyan font-mono text-sm">> Automação_full.json</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gunmetal py-20 px-4">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/3 relative">
+                <div class="absolute inset-0 bg-electricCyan rounded-2xl transform translate-x-2 translate-y-2"></div>
+                <img src="URL_DA_IMAGEM_2_AUTOR_AQUI" alt="Dr. Reginaldo Oliveira" class="relative rounded-2xl shadow-xl w-full grayscale hover:grayscale-0 transition-all duration-500 border border-white/10">
+            </div>
+            
+            <div class="w-full md:w-2/3">
+                <h2 class="font-display text-3xl font-bold mb-4">QUEM É O CRIADOR DO CÓDIGO?</h2>
+                <h3 class="text-electricCyan font-mono text-lg mb-6">Dr. Reginaldo Oliveira <span class="text-gray-500 text-sm">| OAB/SC 57.879</span></h3>
+                
+                <p class="text-gray-300 mb-4 leading-relaxed">
+                    Advogado, Nômade Digital e estrategista. Dr. Reginaldo não é um teórico de palco. Ele vive o que ensina. 
+                </p>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Depois de anos preso no modelo tradicional, ele decodificou a matriz da advocacia digital. Hoje, ele opera um escritório de alta performance usando IA, permitindo liberdade geográfica e financeira.
+                </p>
+                <div class="p-4 bg-obsidian rounded-lg border-l-4 border-neonGreen">
+                    <p class="italic text-gray-400">"Eu não vendo apenas um livro. Eu vendo a chave da sua cela."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="checkout" class="py-24 px-4 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-neonGreen/5 blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-md mx-auto relative z-10">
+            <div class="bg-obsidian border border-white/10 rounded-3xl p-8 shadow-2xl text-center">
+                <div class="mb-6">
+                    <span class="bg-vividPurple/20 text-vividPurple px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Oferta Exclusiva</span>
+                </div>
+                
+                <h3 class="font-display text-2xl font-bold mb-2">A ALAVANCA INFINITA</h3>
+                <p class="text-gray-400 text-sm mb-8">O Manual Completo + 3 Bônus Exclusivos</p>
+                
+                <div class="flex justify-center items-end gap-2 mb-8">
+                    <span class="text-gray-500 line-through text-lg">R$ 638,00</span>
+                    <span class="text-5xl font-bold text-white">12x R$ 19,70</span>
+                </div>
+                <p class="text-gray-400 text-xs mb-8">ou R$ 197,00 à vista</p>
+
+                <ul class="text-left space-y-3 mb-8 text-sm text-gray-300">
+                    <li class="flex items-center"><span class="text-neonGreen mr-2">✓</span> Ebook Completo (PDF)</li>
+                    <li class="flex items-center"><span class="text-neonGreen mr-2">✓</span> Bônus: Pack de Prompts P.A.R.E.</li>
+                    <li class="flex items-center"><span class="text-neonGreen mr-2">✓</span> Bônus: Fluxo ManyChat Pronto</li>
+                    <li class="flex items-center"><span class="text-neonGreen mr-2">✓</span> Bônus: Checklist Blindagem LGPD</li>
+                </ul>
+
+                <a href="SEU_LINK_KIWIFY_AQUI" class="block w-full btn-pulse bg-neonGreen text-obsidian font-display font-bold text-lg py-4 rounded hover:bg-neonGreenHover transition-all uppercase shadow-neon">
+                    COMPRAR AGORA
+                </a>
+                
+                <div class="mt-6 flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <span class="text-xs text-gray-500">Pagamento Seguro via Kiwify</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-obsidian py-12 border-t border-white/5 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="font-display font-bold text-xl mb-4 text-white">A ALAVANCA INFINITA</p>
+            <p class="text-gray-500 text-sm mb-8">Dr. Reginaldo Oliveira - OAB/SC 57.879</p>
+            
+            <div class="flex justify-center gap-6 text-xs text-gray-600 font-mono">
+                <a href="#" class="hover:text-electricCyan transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-electricCyan transition-colors">Política de Privacidade</a>
+                <a href="#" class="hover:text-electricCyan transition-colors">Contato</a>
+            </div>
+            <p class="text-gray-700 text-xs mt-8">© 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
